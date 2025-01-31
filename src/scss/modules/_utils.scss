@@ -1,0 +1,25 @@
+.btn-gradient {
+  // background-color: transparent;
+  @include button-gradient(222deg, #fd7f66, #f4d35e, 1000px, 1);
+  @media (any-hover: hover) {
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    &:hover {
+      span {
+        @include text-gradient(222deg, #fd7f66, #f4d35e);
+      }
+    }
+  }
+}
+.btn-gradient-outlined {
+  @include text-gradient(222deg, #fd7f66, #f4d35e);
+  @include button-gradient(222deg, #fd7f66, #f4d35e, 1000px, 0);
+
+  @media (any-hover: hover) {
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    &:hover {
+      color: $colorBlack;
+    }
+  }
+}

@@ -23,3 +23,17 @@ import isDevice from './modules/device.js'; //DEFINE DEVICE
 
 isWebp();
 isDevice();
+
+// Header burger
+
+const burgerClose = document.querySelector('.header__close');
+const burgerOpen = document.querySelector('.header__burger');
+const burgerMenu = document.querySelector('.header__nav');
+
+burgerOpen.addEventListener('click', () => {
+  burgerMenu.classList.add('active');
+});
+
+burgerClose.addEventListener('click', () => {
+  burgerMenu.classList.remove('active');
+});

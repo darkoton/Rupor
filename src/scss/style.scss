@@ -16,11 +16,13 @@
 //< " FILE WITH VARIABLES " >=============================================================================================================>//
 @import "./modules/_vars";
 
+@import "./modules/_utils";
+
 //< " body SITE " >=============================================================================================================>//
 body {
   background-color: $colorBg;
   font-family: $fontFamily;
-  color: $colorDark;
+  color: $colorWhite;
   font-size: 14px;
 
   // ._lock-scroll
@@ -42,6 +44,8 @@ body {
 // .content
 .content {
   flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 // ._container

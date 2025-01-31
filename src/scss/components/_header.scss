@@ -1,1 +1,139 @@
 //< " ФАЙЛ СТИЛЕЙ ХЕДЕРА " >=============================================================================================================>//
+.header {
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+    @include fluid(padding-top, 30px, 43px, 320px, 1320px);
+    @include fluid(padding-bottom, 30px, 37px, 320px, 1320px);
+  }
+
+  &__logo {
+    @include fluid(max-width, 100px, 75px, 992px, 1320px);
+
+    @media (max-width: 992px) {
+      @include fluid(max-width, 100px, 75px, 320px, 1320px);
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+  &__nav {
+    display: flex;
+    align-items: center;
+    @include fluid(column-gap, 50px, 12px, 320px, 1320px);
+
+    @media (max-width: 992px) {
+      position: fixed;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+      width: 100%;
+      max-width: 320px;
+      height: 100%;
+      top: 0;
+      right: -100%;
+      z-index: 20;
+      background-color: #0e0e0f;
+      padding: 20px;
+      border-radius: 10px 0 0 10px;
+      transition: all 0.3s ease 0s;
+
+      @include fluid(row-gap, 30px, 20px, 320px, 1320px);
+
+      &.active {
+        right: 0;
+      }
+    }
+  }
+  &__link {
+    font-weight: 400;
+    color: $colorWhite;
+    text-align: center;
+
+    @include fluid(font-size, 16px, 13px, 992px, 1320px);
+    @include fluid(line-height, 21px, 18px, 992px, 1320px);
+
+    @media (max-width: 992px) {
+      @include fluid(font-size, 16px, 14px, 320px, 1320px);
+      @include fluid(line-height, 21px, 19px, 320px, 1320px);
+    }
+
+    @media (any-hover: hover) {
+      cursor: pointer;
+      transition: all 0.3s ease 0s;
+      &:hover {
+        color: $colorOrange;
+      }
+    }
+  }
+  &__button {
+    padding: 8px 0;
+    width: 100%;
+    max-width: 212px;
+    font-weight: 500;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+    color: $colorBlack;
+    text-align: center;
+
+    @include fluid(font-size, 16px, 13px, 992px, 1320px);
+    @include fluid(line-height, 21px, 18px, 992px, 1320px);
+    @include fluid(max-width, 212px, 160px, 992px, 1320px);
+
+    @include fluid(padding-top, 8px, 4px, 320px, 1320px);
+    @include fluid(padding-bottom, 8px, 4px, 320px, 1320px);
+
+    @media (max-width: 992px) {
+      display: none;
+
+      @include fluid(font-size, 16px, 14px, 320px, 1320px);
+      @include fluid(line-height, 21px, 19px, 320px, 1320px);
+      @include fluid(max-width, 212px, 160px, 320px, 1320px);
+    }
+
+    &.header__button-mob {
+      display: block;
+    }
+    @media (min-width: 993px) {
+      &.header__button-mob {
+        display: none;
+      }
+    }
+  }
+  &__burger {
+    display: none;
+    background: transparent;
+    color: $colorWhite;
+
+    @media (any-hover: hover) {
+      cursor: pointer;
+      transition: all 0.3s ease 0s;
+      &:hover {
+        color: $colorOrange;
+      }
+    }
+
+    @media (max-width: 992px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  &__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: $colorWhite;
+
+    @media (any-hover: hover) {
+      cursor: pointer;
+      transition: all 0.3s ease 0s;
+      &:hover {
+        color: $colorOrange;
+      }
+    }
+  }
+}
