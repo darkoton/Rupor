@@ -1,0 +1,64 @@
+.about {
+    @include fluid(margin-bottom, 50px, 22.5px, 320px, 1320px);
+
+    &__container {
+        @media (max-width:768px) {
+            padding: 0;
+        }
+    }
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        @include fluid(gap, 96px, 14px, 320px, 1320px);
+
+        @media (max-width:768px) {
+            flex-direction: column;
+        }
+    }
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        max-width: 453px;
+
+        @media (max-width:992px) {
+            max-width: 50%;
+        }
+
+        @media (max-width:768px) {
+            max-width: 100%;
+            padding: 0 15px;
+        }
+
+        @include fluid(gap, 30px, 14px, 320px, 1320px);
+    }
+
+    &__img {
+        border-radius: 25px;
+        overflow: hidden;
+        width: 100%;
+        max-width: 753px;
+
+        @media (max-width:768px) {
+            border-radius: 0;
+        }
+    }
+
+    &__title {
+        text-transform: uppercase;
+        font-family: $fontSpace;
+        font-weight: 500;
+        @include text-gradient(225deg, #fd7f66, #f4d35e);
+        @include fluid(font-size, 35px, 18px, 320px, 1320px);
+        @include fluid(line-height, 45px, 23px, 320px, 1320px);
+
+    }
+
+    &__text {
+        font-weight: 400;
+        color: $colorWhite;
+        @include fluid(font-size, 18px, 14px, 320px, 1320px);
+        @include fluid(line-height, 23px, 18px, 320px, 1320px);
+    }
+}
