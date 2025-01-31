@@ -23,7 +23,8 @@
   &__nav {
     display: flex;
     align-items: center;
-    @include fluid(column-gap, 50px, 12px, 430px, 1320px);
+
+    @include fluid(column-gap, 50px, 30px, 992px, 1320px);
 
     @media (max-width: 992px) {
       position: fixed;
@@ -70,18 +71,15 @@
     }
   }
   &__button {
-    padding: 8px 0;
     width: 100%;
-    max-width: 212px;
     font-weight: 500;
-    line-height: 150%;
     letter-spacing: -0.02em;
     color: $colorBlack;
     text-align: center;
 
     @include fluid(font-size, 16px, 13px, 992px, 1320px);
     @include fluid(line-height, 21px, 18px, 992px, 1320px);
-    @include fluid(max-width, 212px, 160px, 992px, 1320px);
+    @include fluid(max-width, 212px, 150px, 992px, 1320px);
 
     @include fluid(padding-top, 8px, 4px, 430px, 1320px);
     @include fluid(padding-bottom, 8px, 4px, 430px, 1320px);
