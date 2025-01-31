@@ -18,12 +18,6 @@
     flex-direction: column;
   }
 
-  &__right {
-    @media (max-width: 992px) {
-      display: none;
-    }
-  }
-
   &__img {
     width: 100%;
     border-radius: 25px;
@@ -34,6 +28,10 @@
 
     img {
       width: 100%;
+    }
+
+    @media (max-width: 992px) {
+      display: none;
     }
   }
 
