@@ -1,1 +1,111 @@
 //< " ФАЙЛ СТИЛЕЙ ФУТЕРА " >=============================================================================================================>//
+.footer {
+  background-color: $colorBlack;
+
+  &__body {
+    display: flex;
+    @include fluid(gap, 134px, 16px, 430px, 1320px);
+    @include fluid(padding-top, 41px, 20px, 430px, 1320px);
+    @include fluid(padding-bottom, 49px, 51px, 430px, 1320px);
+  }
+  &__logo {
+    width: 100%;
+    @include fluid(max-width, 100px, 46px, 430px, 1320px);
+
+    img {
+      width: 100%;
+    }
+  }
+  &__main {
+    width: 100%;
+    max-width: 876px;
+    @include fluid(padding-top, 39px, 7px, 430px, 1320px);
+
+    @media (max-width: 768px) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 9px;
+
+    @include fluid(margin-bottom, 52px, 30px, 430px, 1320px);
+
+    @media (max-width: 768px) {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+  &__link {
+    text-align: center;
+    color: $colorWhite;
+    font-weight: 400;
+    @include fluid(font-size, 16px, 12px, 430px, 1320px);
+    @include fluid(line-height, 21px, 16px, 430px, 1320px);
+
+    @media (any-hover: hover) {
+      cursor: pointer;
+      transition: all 0.3s ease 0s;
+      &:hover {
+        color: $colorOrange;
+      }
+    }
+  }
+  &__buttons {
+    display: flex;
+    margin-bottom: 17px;
+
+    @include fluid(gap, 24px, 17px, 430px, 1320px);
+
+    @media (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 0;
+    }
+  }
+  &__button {
+    font-weight: 500;
+    padding: 9px 35px;
+    text-align: center;
+    color: $colorBlack;
+
+    @include fluid(font-size, 16px, 12px, 430px, 1320px);
+    @include fluid(line-height, 21px, 16px, 430px, 1320px);
+    @include fluid(padding-left, 35px, 18px, 430px, 1320px);
+    @include fluid(padding-right, 35px, 18px, 430px, 1320px);
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+  &__networks {
+    display: flex;
+    justify-content: end;
+    gap: 25px;
+    margin-bottom: 18px;
+
+    @media (max-width: 768px) {
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &__network {
+    img {
+      width: 100%;
+      @include fluid(max-width, 35px, 20 px, 430px, 1320px);
+    }
+  }
+  &__operated {
+    font-weight: 300;
+    font-size: 14px;
+    color: $colorWhite;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+}

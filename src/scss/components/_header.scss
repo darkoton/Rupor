@@ -5,15 +5,15 @@
     justify-content: space-between;
     gap: 20px;
     align-items: center;
-    @include fluid(padding-top, 30px, 43px, 320px, 1320px);
-    @include fluid(padding-bottom, 30px, 37px, 320px, 1320px);
+    @include fluid(padding-top, 30px, 43px, 430px, 1320px);
+    @include fluid(padding-bottom, 30px, 37px, 430px, 1320px);
   }
 
   &__logo {
     @include fluid(max-width, 100px, 75px, 992px, 1320px);
 
     @media (max-width: 992px) {
-      @include fluid(max-width, 100px, 75px, 320px, 1320px);
+      @include fluid(max-width, 100px, 75px, 430px, 1320px);
     }
 
     img {
@@ -23,7 +23,7 @@
   &__nav {
     display: flex;
     align-items: center;
-    @include fluid(column-gap, 50px, 12px, 320px, 1320px);
+    @include fluid(column-gap, 50px, 12px, 430px, 1320px);
 
     @media (max-width: 992px) {
       position: fixed;
@@ -41,7 +41,7 @@
       border-radius: 10px 0 0 10px;
       transition: all 0.3s ease 0s;
 
-      @include fluid(row-gap, 30px, 20px, 320px, 1320px);
+      @include fluid(row-gap, 30px, 20px, 430px, 1320px);
 
       &.active {
         right: 0;
@@ -53,12 +53,12 @@
     color: $colorWhite;
     text-align: center;
 
-    @include fluid(font-size, 16px, 13px, 992px, 1320px);
-    @include fluid(line-height, 21px, 18px, 992px, 1320px);
+    @include fluid(font-size, 16px, 12px, 430px, 1320px);
+    @include fluid(line-height, 21px, 16px, 430px, 1320px);
 
     @media (max-width: 992px) {
-      @include fluid(font-size, 16px, 14px, 320px, 1320px);
-      @include fluid(line-height, 21px, 19px, 320px, 1320px);
+      @include fluid(font-size, 16px, 14px, 430px, 1320px);
+      @include fluid(line-height, 21px, 19px, 430px, 1320px);
     }
 
     @media (any-hover: hover) {
@@ -83,15 +83,15 @@
     @include fluid(line-height, 21px, 18px, 992px, 1320px);
     @include fluid(max-width, 212px, 160px, 992px, 1320px);
 
-    @include fluid(padding-top, 8px, 4px, 320px, 1320px);
-    @include fluid(padding-bottom, 8px, 4px, 320px, 1320px);
+    @include fluid(padding-top, 8px, 4px, 430px, 1320px);
+    @include fluid(padding-bottom, 8px, 4px, 430px, 1320px);
 
     @media (max-width: 992px) {
       display: none;
 
-      @include fluid(font-size, 16px, 14px, 320px, 1320px);
-      @include fluid(line-height, 21px, 19px, 320px, 1320px);
-      @include fluid(max-width, 212px, 160px, 320px, 1320px);
+      @include fluid(font-size, 16px, 14px, 430px, 1320px);
+      @include fluid(line-height, 21px, 19px, 430px, 1320px);
+      @include fluid(max-width, 212px, 160px, 430px, 1320px);
     }
 
     &.header__button-mob {
@@ -123,6 +123,11 @@
     }
   }
   &__close {
+    display: none;
+    @media (max-width: 992px) {
+      display: block;
+    }
+
     position: absolute;
     top: 15px;
     right: 15px;
