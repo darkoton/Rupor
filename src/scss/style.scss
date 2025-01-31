@@ -21,7 +21,7 @@
 //< " body SITE " >=============================================================================================================>//
 body {
   background-color: $colorBg;
-  font-family: $fontFamily;
+  font-family: $fontIBM;
   color: $colorWhite;
   font-size: 14px;
 
@@ -63,6 +63,7 @@ body {
 @import "./components/_header";
 @import "./components/_footer";
 @import "./components/_main";
+@import "./components/_analytics";
 // @import "./components/_preloader";
 
 //< " MAIN BLOCK " >=============================================================================================================>//
