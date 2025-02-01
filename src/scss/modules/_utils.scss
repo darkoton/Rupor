@@ -54,3 +54,12 @@
     object-fit: cover;
   }
 }
+
+.title-section {
+  text-transform: uppercase;
+  font-family: $fontSpace;
+  font-weight: 500;
+  @include text-gradient(225deg, #fd7f66, #f4d35e);
+  @include fluid(font-size, 35px, 18px, 320px, 1320px);
+  @include fluid(line-height, 45px, 23px, 320px, 1320px);
+}

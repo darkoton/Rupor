@@ -1,0 +1,75 @@
+.features {
+  @include fluid(margin-bottom, 50px, 22.5px, 320px, 1320px);
+
+  &__title {
+    @include fluid(margin-bottom, 27px, 14px, 320px, 1320px);
+  }
+  &__cards {
+    display: flex;
+    justify-content: space-between;
+    @include fluid(gap, 40px, 14px, 320px, 1320px);
+
+    @media (max-width: 992px) {
+      flex-wrap: wrap;
+    }
+  }
+  &__card {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    border-radius: 25px;
+    border: 1px solid #555557;
+    backdrop-filter: blur(42px);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0) 100%);
+
+    @include fluid(padding-top, 44px, 17px, 320px, 1320px);
+    @include fluid(padding-bottom, 44px, 17px, 320px, 1320px);
+    @include fluid(padding-left, 30px, 22.5px, 320px, 1320px);
+    @include fluid(padding-right, 30px, 22.5px, 320px, 1320px);
+    @include fluid(gap, 30px, 22.5px, 320px, 1320px);
+
+    @media (max-width: 992px) {
+      width: 48%;
+    }
+
+    @media (max-width: 680px) {
+      width: 100%;
+    }
+
+    &-left {
+      display: flex;
+      flex-direction: column;
+
+      @include fluid(gap, 20px, 15px, 320px, 1320px);
+    }
+
+    &-title {
+      font-weight: 400;
+
+      @include text-gradient(255deg, #fd7f66, #f4d35e);
+      @include fluid(font-size, 20px, 14px, 320px, 1320px);
+      @include fluid(line-height, 23px, 19px, 320px, 1320px);
+    }
+
+    &-text {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 18px;
+      color: $colorWhite;
+
+      @include fluid(font-size, 14px, 11px, 320px, 1320px);
+      @include fluid(line-height, 18px, 14px, 320px, 1320px);
+    }
+
+    &-img {
+      width: 100%;
+      max-width: 95px;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
