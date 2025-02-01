@@ -1,0 +1,100 @@
+.features {
+    @include fluid(margin-bottom, 50px, 22.5px, 320px, 1320px);
+
+    &__title {
+        @include fluid(margin-bottom, 27px, 14px, 320px, 1320px)
+    }
+
+    &__text {
+        font-weight: 400;
+        color: $colorWhite;
+
+        @include fluid(font-size, 18px, 14px, 320px, 1320px);
+        @include fluid(line-height, 23px, 18px, 320px, 1320px);
+        @include fluid(margin-bottom, 53px, 15px, 320px, 1320px);
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(162px, 300px));
+        justify-content: center;
+
+        @include fluid(margin-bottom, 30px, 15px, 320px, 1320px);
+        @include fluid(gap, 30px, 16px, 320px, 1320px);
+
+        @media (max-width: 768px) {
+            grid-template-columns: repeat(2, minmax(162px, 300px));
+        }
+
+        @media (max-width: 400px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 23px 0;
+        border-radius: 25px;
+
+        @include fluid(padding-left, 17px, 23px, 320px, 1320px);
+        @include fluid(padding-right, 17px, 23px, 320px, 1320px);
+
+        &:nth-child(odd) {
+            background: url('../img/features/bg-1.jpg') 0 0/cover no-repeat;
+        }
+
+        &:nth-child(even) {
+            background: url('../img/features/bg-2.jpg') 0 0/cover no-repeat;
+        }
+
+        &-img {
+            width: 100%;
+            overflow: hidden;
+
+            @include fluid(border-radius, 25px, 0px, 320px, 1320px);
+
+
+            &:first-child {
+                margin-bottom: 29px;
+
+                @include fluid(margin-bottom, 29px, 19px, 320px, 1320px);
+            }
+
+            picture {
+                width: 100%;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+
+        &-title {
+            font-weight: 500;
+            font-size: 20px;
+            text-align: center;
+            color: $colorBlack;
+            max-width: 228px;
+
+            @include fluid(font-size, 20px, 13px, 320px, 1320px);
+            @include fluid(line-height, 26px, 16px, 320px, 1320px);
+            @include fluid(margin-bottom, 16px, 7px, 320px, 1320px);
+        }
+
+        &-text {
+            font-weight: 400;
+            text-align: center;
+            color: $colorBlack;
+            max-width: 228px;
+
+            @include fluid(font-size, 14px, 11px, 320px, 1320px);
+            @include fluid(line-height, 18px, 14px, 320px, 1320px);
+
+            &:not(:last-child) {
+                @include fluid(margin-bottom, 30px, 19px, 320px, 1320px);
+            }
+        }
+    }
+}
