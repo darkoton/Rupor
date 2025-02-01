@@ -54,6 +54,7 @@ body {
 
 // ._container
 ._container {
+  width: 100%;
   padding: 0px #{calc($containerPadding / 2) + px};
   margin: 0px auto;
   max-width: $maxWidthContainer + px;
@@ -67,6 +68,7 @@ body {
 @import "./components/_about";
 @import "./components/_features";
 @import "./components/_partners";
+@import "./components/_tokenomics";
 // @import "./components/_preloader";
 
 //< " MAIN BLOCK " >=============================================================================================================>//

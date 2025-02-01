@@ -4,10 +4,15 @@
   &__title {
     @include fluid(margin-bottom, 24px, 15px, 320px, 1320px);
   }
+
   &__banner {
     background-color: $colorWhite;
-    padding: 30px 0;
+
+    @include fluid(padding-top, 30, 15px, 320px, 1320px);
+    @include fluid(padding-bottom, 30, 15px, 320px, 1320px);
+
   }
+
   &__list {
     display: flex;
     gap: 20px;
@@ -20,6 +25,7 @@
       animation: scroll 15s linear infinite;
     }
   }
+
   &__logo {
     max-height: 48px;
     min-height: 22px;
@@ -38,6 +44,7 @@
   0% {
     transform: translateX(100vw);
   }
+
   100% {
     transform: translateX(-100%);
   }
