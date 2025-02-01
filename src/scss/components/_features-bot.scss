@@ -1,9 +1,10 @@
-.features {
+.features-bot {
   @include fluid(margin-bottom, 50px, 22.5px, 320px, 1320px);
 
   &__title {
     @include fluid(margin-bottom, 27px, 14px, 320px, 1320px);
   }
+
   &__cards {
     display: flex;
     justify-content: space-between;
@@ -13,6 +14,7 @@
       flex-wrap: wrap;
     }
   }
+
   &__card {
     width: 100%;
     display: flex;

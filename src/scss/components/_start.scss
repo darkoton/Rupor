@@ -1,0 +1,86 @@
+.start {
+    @include fluid(margin-bottom, 50px, 22.5px, 320px, 1320px);
+
+    &__title {
+        @include fluid(margin-bottom, 27px, 14px, 320px, 1320px);
+    }
+
+    &__cards {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 28px;
+    }
+
+    & .swiper-wrapper {
+        @media (min-width: 768px) {
+            display: flex;
+            justify-content: space-between;
+            @include fluid(gap, 65px, 15px, 320px, 1320px);
+        }
+    }
+
+    &__card {
+        flex-direction: column;
+        align-items: center;
+        backdrop-filter: blur(42px);
+        background: radial-gradient(231% 135.8% at 0.9% 2.98%, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+        border-radius: 25px;
+        display: flex;
+
+        @include fluid(gap, 35px, 25px, 320px, 1320px);
+        @include fluid(padding-left, 56px, 35px, 320px, 1320px);
+        @include fluid(padding-right, 56px, 35px, 320px, 1320px);
+
+        &-text {
+            font-weight: 400;
+            text-align: center;
+            color: $colorWhite;
+
+            @include fluid(font-size, 18px, 13px, 320px, 1320px);
+            @include fluid(line-height, 23px, 16px, 320px, 1320px);
+
+
+            &:nth-child(1) {
+                @include fluid(padding-top, 50px, 25px, 320px, 1320px);
+            }
+
+            &:nth-child(2) {
+                @include fluid(padding-bottom, 50px, 25px, 320px, 1320px);
+            }
+        }
+
+        &-img {
+            width: 100%;
+
+            & img {
+                width: 100%;
+            }
+        }
+    }
+
+    & .swiper-slide {
+        @media (min-width: 768px) {
+            flex-shrink: 1 !important;
+        }
+    }
+
+    &__left,
+    &__right {
+        display: none;
+        color: $colorWhite;
+
+        @media (any-hover:hover) {
+            transition: all 0.3s ease 0s;
+            cursor: pointer;
+
+            &:hover {
+                color: $colorOrange;
+            }
+        }
+
+        @media (max-width: 768px) {
+            display: block;
+        }
+    }
+}
