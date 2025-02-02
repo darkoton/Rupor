@@ -8,9 +8,8 @@
   &__banner {
     background-color: $colorWhite;
 
-    @include fluid(padding-top, 30, 15px, 320px, 1320px);
-    @include fluid(padding-bottom, 30, 15px, 320px, 1320px);
-
+    @include fluid(padding-top, 30px, 15px, 320px, 1320px);
+    @include fluid(padding-bottom, 30px, 15px, 320px, 1320px);
   }
 
   &__list {
