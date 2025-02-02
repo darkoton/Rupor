@@ -3225,7 +3225,7 @@ body._lock-scroll {
   backdrop-filter: blur(42px);
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
   border-radius: 25px;
-  border: 1px solid #4C4C4D;
+  border: 1px solid #4c4c4d;
   display: flex;
 }
 @media (max-width: 992px) {
@@ -3317,6 +3317,7 @@ body._lock-scroll {
   font-weight: 400;
   cursor: pointer;
   padding: 17px 17px 17px 12px;
+  font-family: "Space Grotesk";
   background: -webkit-linear-gradient(225deg, #fd7f66, #f4d35e);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -3592,19 +3593,19 @@ body._lock-scroll {
   align-items: center;
   gap: 25px;
   cursor: pointer;
-  --border-color: #4C4C4D;
+  --border-color: #4c4c4d;
 }
 .roadmap__step:nth-child(1) {
-  --border-color: #F4D35E;
+  --border-color: #f4d35e;
 }
 .roadmap__step:nth-child(2) {
-  --border-color: #FB9464;
+  --border-color: #fb9464;
 }
 .roadmap__step:nth-child(3) {
-  --border-color: #FD7F66;
+  --border-color: #fd7f66;
 }
 .roadmap__step:nth-child(4) {
-  --border-color: #6DB866;
+  --border-color: #6db866;
 }
 .roadmap__step-plate {
   width: 100%;
@@ -3647,7 +3648,7 @@ body._lock-scroll {
   backdrop-filter: blur(42px);
   background: radial-gradient(407.02% 136.53% at 0.9% 2.98%, rgba(255, 255, 255, 0.01) 0%, rgba(255, 255, 255, 0) 100%);
   border-radius: 25px;
-  border: 1px solid #4C4C4D;
+  border: 1px solid #4c4c4d;
   padding: 10px 20px 7px 20px;
   min-height: 118px;
   transition: all 0.3s ease 0s;
