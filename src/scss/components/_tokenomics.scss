@@ -1,330 +1,336 @@
 .tokenomics {
+  @include fluid(margin-bottom, 46px, 22.5px, 320px, 1320px);
 
-    @include fluid(margin-bottom, 46px, 22.5px, 320px, 1320px);
+  &__title {
+    width: 100%;
+    @include fluid(margin-bottom, 27px, 14px, 320px, 1320px);
+  }
 
-    &__title {
-        width: 100%;
-        @include fluid(margin-bottom, 27px, 14px, 320px, 1320px);
+  &__body {
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 1386px) {
+      padding: 0 15px;
+    }
+  }
+
+  &__chart {
+    width: 100%;
+    max-width: 986px;
+    align-self: center;
+    padding: 0 15px;
+
+    @include fluid(margin-bottom, 52px, 0px, 320px, 1320px);
+
+    @media (max-width: 1386px) {
+      padding: 0;
     }
 
-    &__body {
-        display: flex;
-        flex-direction: column;
-
-        @media (max-width: 1386px) {
-            padding: 0 15px;
-        }
-
+    @media (max-width: 768px) {
+      display: none;
     }
 
-    &__chart {
-        width: 100%;
-        max-width: 986px;
-        align-self: center;
-        padding: 0 15px;
-
-        @include fluid(margin-bottom, 52px, 0px, 320px, 1320px);
-
-        @media (max-width: 1386px) {
-            padding: 0;
-        }
-
-        @media (max-width: 768px) {
-            display: none;
-        }
-
-        picture {
-            width: 100%;
-        }
-
-        img {
-            width: 100%;
-        }
+    picture {
+      width: 100%;
     }
 
-    &__tabs {
-        width: 100%;
-        max-width: 1386px;
-        margin: 0 auto;
-        backdrop-filter: blur(42px);
-        background: radial-gradient(407.02% 136.53% at 0.9% 2.98%, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
-        border-radius: 25px;
-        border: 1px solid #4C4C4E;
-        overflow: hidden;
+    img {
+      width: 100%;
+    }
+  }
 
-        &::-webkit-scrollbar {
-            width: 0;
-            height: 0;
-        }
+  &__tabs {
+    width: 100%;
+    max-width: 1386px;
+    margin: 0 auto;
+    backdrop-filter: blur(42px);
+    background: radial-gradient(
+      407.02% 136.53% at 0.9% 2.98%,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    border-radius: 25px;
+    border: 1px solid #4c4c4e;
+    overflow: hidden;
 
-        @include fluid(margin-bottom, 52px, 14px, 320px, 1320px);
-
-        @media (ax-width: 360px) {
-            overflow: auto;
-        }
-
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
     }
 
-    &__nav {
-        display: flex;
-        padding: 6px 0;
-        cursor: auto;
-        position: relative;
-        font-family: $fontSpace;
-        width: fit-content;
-        overflow: hidden;
+    @include fluid(margin-bottom, 52px, 14px, 320px, 1320px);
 
-        @include border-gradient(225deg, #fd7f66, #f4d35e, 0, 0);
-        @include fluid(padding-left, 80px, 24px, 320px, 1320px);
-        @include fluid(padding-right, 80px, 24px, 320px, 1320px);
-        @include fluid(gap, 90px, 11px, 320px, 1320px);
+    @media (max-width: 360px) {
+      overflow: auto;
+    }
+  }
 
-        &::before {
-            padding: 0;
-            padding-bottom: 1px;
-        }
+  &__nav {
+    display: flex;
+    padding: 6px 0;
+    cursor: auto;
+    position: relative;
+    font-family: $fontSpace;
+    width: 100%;
+    overflow: hidden;
 
-        &::after {
-            content: none;
-        }
+    @include border-gradient(225deg, #fd7f66, #f4d35e, 0, 0);
+    @include fluid(padding-left, 80px, 24px, 320px, 1320px);
+    @include fluid(padding-right, 80px, 24px, 320px, 1320px);
+    @include fluid(gap, 90px, 11px, 320px, 1320px);
+
+    &::before {
+      padding: 0;
+      padding-bottom: 1px;
     }
 
-    &__tab {
-        @include text-gradient(225deg, #fd7f66, #f4d35e);
-        font-weight: 400;
-        text-align: center;
-        cursor: pointer;
-        padding: 7px 0;
-
-        @include fluid(font-size, 20px, 11px, 320px, 1320px);
-        @include fluid(line-height, 26px, 14px, 320px, 1320px);
+    &::after {
+      content: none;
     }
 
-    &__indicator {
+    @media (max-width: 400px) {
+      width: fit-content;
+    }
+  }
 
-        left: 0%;
+  &__tab {
+    @include text-gradient(225deg, #fd7f66, #f4d35e);
+    font-weight: 400;
+    text-align: center;
+    cursor: pointer;
+    padding: 7px 0;
+
+    @include fluid(font-size, 20px, 11px, 320px, 1320px);
+    @include fluid(line-height, 26px, 14px, 320px, 1320px);
+  }
+
+  &__indicator {
+    left: 0%;
+    bottom: -1px;
+    width: 150px;
+    height: 100%;
+    border-bottom: 2px solid #28282a;
+    transition:
+      width 0.3s ease 0s,
+      left 0.2s ease 0s;
+
+    @include border-gradient(225deg, #fd7f66, #f4d35e, 0, 0);
+
+    & {
+      position: absolute;
+      overflow: visible;
+      z-index: -1;
+    }
+
+    @include fluid(bottom, -0.5px, -1px, 320px, 1320px);
+
+    &::before {
+      padding: 1px;
+      padding-top: 0.5px;
+      padding-bottom: 0;
+      border-radius: 25px 25px 0 0;
+      // background: linear-gradient(225deg, red 0%, red 91%, transparent 91%);
+    }
+
+    &-round {
+      width: 100%;
+      height: 100%;
+
+      &::before {
+        content: "";
+        position: absolute;
         bottom: -1px;
-        width: 150px;
+        left: -19px;
+        width: 20px;
+        height: 20px;
+        border-right: 1px solid #f4d35e;
+        border-bottom: 1px solid #f4d35e;
+        border-bottom-right-radius: 25px;
+        box-shadow: 3px 4px 0px 3px #28282a;
+        padding: 0 1px 1px 0;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        right: -19px;
+        width: 20px;
+        height: 20px;
+        border-left: 1px solid #fd7f66;
+        border-bottom: 1px solid #fd7f66;
+        border-bottom-left-radius: 25px;
+        box-shadow: -3px 4px 0px 3px #28282a;
+        padding: 0 1px 1px 0;
+      }
+    }
+  }
+
+  &__content {
+    position: sticky;
+    left: 0;
+
+    @include fluid(padding-top, 27px, 11px, 320px, 1320px);
+    @include fluid(padding-bottom, 27px, 11px, 320px, 1320px);
+    @include fluid(padding-right, 49px, 29px, 320px, 1320px);
+    @include fluid(padding-left, 76px, 29px, 320px, 1320px);
+  }
+
+  &__block {
+    display: none;
+    justify-content: space-between;
+    overflow: hidden;
+    row-gap: 12px;
+
+    @include fluid(column-gap, 130px, 12px, 320px, 1320px);
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &._active {
+      display: flex;
+    }
+
+    &-left {
+      display: flex;
+      flex-direction: column;
+      max-width: 271px;
+
+      @include fluid(gap, 28px, 13px, 320px, 1320px);
+
+      @media (max-width: 768px) {
+        max-width: 100%;
+        padding: 0 9px;
+      }
+    }
+
+    &-title {
+      font-weight: 500;
+      color: $colorWhite;
+
+      @include fluid(font-size, 20px, 14px, 320px, 1320px);
+      @include fluid(line-height, 26px, 21px, 320px, 1320px);
+
+      @media (max-width: 768px) {
+        text-align: center;
+        @include text-gradient(225deg, #fd7f66, #f4d35e);
+      }
+    }
+
+    &-texts {
+      display: flex;
+      flex-direction: column;
+      @include fluid(gap, 16px, 13px, 320px, 1320px);
+    }
+
+    &-text {
+      font-weight: 400;
+      color: $colorWhite;
+
+      @include fluid(font-size, 14px, 11px, 320px, 1320px);
+      @include fluid(line-height, 18px, 14px, 320px, 1320px);
+    }
+
+    &-img {
+      width: 100%;
+      max-width: 866px;
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+
+      picture {
+        width: 100%;
+      }
+
+      img {
+        width: 100%;
         height: 100%;
-        border-bottom: 2px solid #28282a;
-        transition: width 0.3s ease 0s, left 0.2s ease 0s;
+        object-fit: cover;
+      }
+    }
+  }
 
-        @include border-gradient(225deg, #fd7f66, #f4d35e, 0, 0);
+  &__adress {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-family: $fontSpace;
 
-        & {
-            position: absolute;
-            overflow: visible;
-            z-index: -1;
-        }
-
-        @include fluid(bottom, -0.5px, -1px, 320px, 1320px);
-
-
-        &::before {
-            padding: 1px;
-            padding-top: 0.5px;
-            padding-bottom: 0;
-            border-radius: 25px 25px 0 0;
-            // background: linear-gradient(225deg, red 0%, red 91%, transparent 91%);
-        }
-
-        &-round {
-            width: 100%;
-            height: 100%;
-
-            &::before {
-                content: '';
-                position: absolute;
-                bottom: -1px;
-                left: -19px;
-                width: 20px;
-                height: 20px;
-                border-right: 1px solid #f4d35e;
-                border-bottom: 1px solid #f4d35e;
-                border-bottom-right-radius: 25px;
-                box-shadow: 3px 4px 0px 3px #28282a;
-                padding: 0 1px 1px 0;
-            }
-
-            &::after {
-                content: '';
-                position: absolute;
-                bottom: -1px;
-                right: -19px;
-                width: 20px;
-                height: 20px;
-                border-left: 1px solid #fd7f66;
-                border-bottom: 1px solid #fd7f66;
-                border-bottom-left-radius: 25px;
-                box-shadow: -3px 4px 0px 3px #28282a;
-                padding: 0 1px 1px 0;
-            }
-        }
+    @media (max-width: 1386px) {
+      padding: 0px;
     }
 
-    &__content {
-        position: sticky;
-        left: 0;
-
-        @include fluid(padding-top, 27px, 11px, 320px, 1320px);
-        @include fluid(padding-bottom, 27px, 11px, 320px, 1320px);
-        @include fluid(padding-right, 49px, 29px, 320px, 1320px);
-        @include fluid(padding-left, 76px, 29px, 320px, 1320px);
+    @media (max-width: 680px) {
+      flex-direction: column;
     }
 
-    &__block {
-        display: none;
-        justify-content: space-between;
-        overflow: hidden;
-        row-gap: 12px;
+    &-text {
+      font-weight: 500;
+      color: $colorWhite;
 
-        @include fluid(column-gap, 130px, 12px, 320px, 1320px);
-
-        @media (max-width: 768px) {
-            flex-direction: column;
-            align-items: center;
-        }
-
-        &._active {
-            display: flex;
-        }
-
-        &-left {
-            display: flex;
-            flex-direction: column;
-            max-width: 271px;
-
-            @include fluid(gap, 28px, 13px, 320px, 1320px);
-
-            @media (max-width: 768px) {
-                max-width: 100%;
-                padding: 0 9px;
-            }
-
-        }
-
-        &-title {
-            font-weight: 500;
-            color: $colorWhite;
-
-            @include fluid(font-size, 20px, 14px, 320px, 1320px);
-            @include fluid(line-height, 26px, 21px, 320px, 1320px);
-
-            @media (max-width: 768px) {
-                text-align: center;
-                @include text-gradient(225deg, #fd7f66, #f4d35e);
-            }
-        }
-
-        &-texts {
-            display: flex;
-            flex-direction: column;
-            @include fluid(gap, 16px, 13px, 320px, 1320px);
-        }
-
-        &-text {
-            font-weight: 400;
-            color: $colorWhite;
-
-            @include fluid(font-size, 14px, 11px, 320px, 1320px);
-            @include fluid(line-height, 18px, 14px, 320px, 1320px);
-        }
-
-        &-img {
-            width: 100%;
-            max-width: 866px;
-            border-radius: 10px;
-            overflow: hidden;
-            display: flex;
-
-            picture {
-                width: 100%;
-            }
-
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-        }
+      @include fluid(font-size, 20px, 14px, 320px, 1320px);
+      @include fluid(line-height, 26px, 18px, 320px, 1320px);
     }
 
-    &__adress {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 10px;
-        font-family: $fontSpace;
+    &-value {
+      font-weight: 400;
+      color: $colorWhite;
 
-        @media (max-width: 1386px) {
-            padding: 0px;
+      @include fluid(font-size, 20px, 14px, 320px, 1320px);
+      @include fluid(line-height, 26px, 18px, 320px, 1320px);
+
+      @media (max-width: 680px) {
+        span {
+          display: none;
         }
-
-        @media (max-width:680px) {
-            flex-direction: column;
-        }
-
-        &-text {
-            font-weight: 500;
-            color: $colorWhite;
-
-            @include fluid(font-size, 20px, 14px, 320px, 1320px);
-            @include fluid(line-height, 26px, 18px, 320px, 1320px);
-        }
-
-        &-value {
-            font-weight: 400;
-            color: $colorWhite;
-
-            @include fluid(font-size, 20px, 14px, 320px, 1320px);
-            @include fluid(line-height, 26px, 18px, 320px, 1320px);
-
-            @media (max-width:680px) {
-                span {
-                    display: none;
-                }
-            }
-        }
-
-        &-field {
-            backdrop-filter: blur(42px);
-            background: radial-gradient(407.02% 136.53% at 0.9% 2.98%, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border-radius: 25px;
-            border: 1px solid #49494A;
-
-            @include fluid(padding-top, 12px, 16px, 320px, 1320px);
-            @include fluid(padding-bottom, 12px, 16px, 320px, 1320px);
-            @include fluid(padding-right, 63px, 10px, 320px, 1320px);
-            @include fluid(padding-left, 46px, 10px, 320px, 1320px);
-            @include fluid(gap, 155px, 15px, 320px, 1320px);
-
-            @media (max-width:680px) {
-                width: 100%;
-            }
-        }
-
-        &-copy {
-            font-weight: 100;
-            color: $colorWhite;
-            font-family: $fontIBM;
-
-            @include fluid(font-size, 18px, 13px, 320px, 1320px);
-            @include fluid(line-height, 23px, 13px, 320px, 1320px);
-
-
-            @media (any-hover: hover) {
-                cursor: pointer;
-                transition: all 0.3s ease 0s;
-
-                &:hover {
-                    color: $colorOrange;
-                }
-            }
-
-        }
+      }
     }
+
+    &-field {
+      backdrop-filter: blur(42px);
+      background: radial-gradient(
+        407.02% 136.53% at 0.9% 2.98%,
+        rgba(255, 255, 255, 0.1) 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 25px;
+      border: 1px solid #49494a;
+
+      @include fluid(padding-top, 12px, 16px, 320px, 1320px);
+      @include fluid(padding-bottom, 12px, 16px, 320px, 1320px);
+      @include fluid(padding-right, 63px, 10px, 320px, 1320px);
+      @include fluid(padding-left, 46px, 10px, 320px, 1320px);
+      @include fluid(gap, 155px, 15px, 320px, 1320px);
+
+      @media (max-width: 680px) {
+        width: 100%;
+      }
+    }
+
+    &-copy {
+      font-weight: 100;
+      color: $colorWhite;
+      font-family: $fontIBM;
+
+      @include fluid(font-size, 18px, 13px, 320px, 1320px);
+      @include fluid(line-height, 23px, 13px, 320px, 1320px);
+
+      @media (any-hover: hover) {
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+
+        &:hover {
+          color: $colorOrange;
+        }
+      }
+    }
+  }
 }
