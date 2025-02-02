@@ -1,103 +1,299 @@
-// function createRadialGradientPie(context, color) {
-//   const chartArea = context.chart.chartArea;
-//   if (!chartArea || !context.element) {
-//     return color;
-//   }
+const datas = {
+  rupor: [
+    {
+      name: 'Percentage',
+      colorByPoint: true,
+      data: [
+        {
+          name: 'Public',
+          y: 15,
+          borderColor: '#ECECED',
+          color: {
+            linearGradient: { x1: 0, x2: 2, y1: 1, y2: 0 },
+            stops: [
+              [0, 'rgba(255,255,255,0.4)'],
+              [1, 'rgba(255,255,255,0)'],
+            ],
+          },
+        },
+        {
+          name: 'Public',
+          y: 20,
+          borderColor: '#779176',
+          color: {
+            linearGradient: { x1: 0, x2: 2, y1: 1, y2: 0 },
+            stops: [
+              [0, 'rgba(109, 184, 102, 0.4)'],
+              [1, 'rgba(255,255,255,0)'],
+            ],
+          },
+        },
+        {
+          name: 'Public',
+          sliced: true,
+          y: 15,
+          borderColor: '#A49D69',
+          color: {
+            linearGradient: { x1: 0, x2: 2, y1: 1, y2: 0 },
+            stops: [
+              [0, 'rgba(255, 232, 103, 0.4)'],
+              [1, 'rgba(255,255,255,0)'],
+            ],
+          },
+        },
+        {
+          name: 'Public',
+          y: 40,
+          borderColor: '#A66455',
+          color: {
+            linearGradient: { x1: 0, x2: 2, y1: 1, y2: 0 },
+            stops: [
+              [0, 'rgba(253, 127, 102, 0.4)'],
+              [1, 'rgba(255,255,255,0)'],
+            ],
+          },
+        },
+      ],
+    },
+  ],
+  liquidity: [
+    {
+      name: 'Percentage',
+      colorByPoint: true,
+      data: [
+        {
+          name: 'Public',
+          y: 5,
+          borderColor: '#ECECED',
+          color: {
+            linearGradient: { x1: 0, x2: 2, y1: 1, y2: 0 },
+            stops: [
+              [0, 'rgba(255,255,255,0.4)'],
+              [1, 'rgba(255,255,255,0)'],
+            ],
+          },
+        },
+        {
+          name: 'Public',
+          y: 75,
+          borderColor: '#779176',
+          color: {
+            linearGradient: { x1: 0, x2: 2, y1: 1, y2: 0 },
+            stops: [
+              [0, 'rgba(109, 184, 102, 0.4)'],
+              [1, 'rgba(255,255,255,0)'],
+            ],
+          },
+        },
+        {
+          name: 'Public',
+          sliced: true,
+          y: 15,
+          borderColor: '#A49D69',
+          color: {
+            linearGradient: { x1: 0, x2: 2, y1: 1, y2: 0 },
+            stops: [
+              [0, 'rgba(255, 232, 103, 0.4)'],
+              [1, 'rgba(255,255,255,0)'],
+            ],
+          },
+        },
+        {
+          name: 'Public',
+          y: 25,
+          borderColor: '#A66455',
+          color: {
+            linearGradient: { x1: 0, x2: 2, y1: 1, y2: 0 },
+            stops: [
+              [0, 'rgba(253, 127, 102, 0.4)'],
+              [1, 'rgba(255,255,255,0)'],
+            ],
+          },
+        },
+      ],
+    },
+  ],
+  reserves: [
+    {
+      name: 'Percentage',
+      colorByPoint: true,
+      data: [
+        {
+          name: 'Public',
+          y: 30,
+          borderColor: '#ECECED',
+          color: {
+            linearGradient: { x1: 0, x2: 2, y1: 1, y2: 0 },
+            stops: [
+              [0, 'rgba(255,255,255,0.4)'],
+              [1, 'rgba(255,255,255,0)'],
+            ],
+          },
+        },
+        {
+          name: 'Public',
+          y: 40,
+          borderColor: '#779176',
+          color: {
+            linearGradient: { x1: 0, x2: 2, y1: 1, y2: 0 },
+            stops: [
+              [0, 'rgba(109, 184, 102, 0.4)'],
+              [1, 'rgba(255,255,255,0)'],
+            ],
+          },
+        },
+        {
+          name: 'Public',
+          sliced: true,
+          y: 15,
+          borderColor: '#A49D69',
+          color: {
+            linearGradient: { x1: 0, x2: 2, y1: 1, y2: 0 },
+            stops: [
+              [0, 'rgba(255, 232, 103, 0.4)'],
+              [1, 'rgba(255,255,255,0)'],
+            ],
+          },
+        },
+        {
+          name: 'Public',
+          y: 15,
+          borderColor: '#A66455',
+          color: {
+            linearGradient: { x1: 0, x2: 2, y1: 1, y2: 0 },
+            stops: [
+              [0, 'rgba(253, 127, 102, 0.4)'],
+              [1, 'rgba(255,255,255,0)'],
+            ],
+          },
+        },
+      ],
+    },
+  ],
+  airdrops: [
+    {
+      name: 'Percentage',
+      colorByPoint: true,
+      data: [
+        {
+          name: 'Public',
+          y: 10,
+          borderColor: '#ECECED',
+          color: {
+            linearGradient: { x1: 0, x2: 2, y1: 1, y2: 0 },
+            stops: [
+              [0, 'rgba(255,255,255,0.4)'],
+              [1, 'rgba(255,255,255,0)'],
+            ],
+          },
+        },
+        {
+          name: 'Public',
+          sliced: true,
+          y: 50,
+          borderColor: '#779176',
+          color: {
+            linearGradient: { x1: 0, x2: 2, y1: 1, y2: 0 },
+            stops: [
+              [0, 'rgba(109, 184, 102, 0.4)'],
+              [1, 'rgba(255,255,255,0)'],
+            ],
+          },
+        },
+        {
+          name: 'Public',
+          sliced: true,
+          y: 15,
+          borderColor: '#A49D69',
+          color: {
+            linearGradient: { x1: 0, x2: 2, y1: 1, y2: 0 },
+            stops: [
+              [0, 'rgba(255, 232, 103, 0.4)'],
+              [1, 'rgba(255,255,255,0)'],
+            ],
+          },
+        },
+        {
+          name: 'Public',
+          y: 25,
+          borderColor: '#A66455',
+          color: {
+            linearGradient: { x1: 0, x2: 2, y1: 1, y2: 0 },
+            stops: [
+              [0, 'rgba(253, 127, 102, 0.4)'],
+              [1, 'rgba(255,255,255,0)'],
+            ],
+          },
+        },
+      ],
+    },
+  ],
+  development: [
+    {
+      name: 'Percentage',
+      colorByPoint: true,
+      data: [
+        {
+          name: 'Public',
+          y: 30,
+          borderColor: '#ECECED',
+          color: {
+            linearGradient: { x1: 0, x2: 2, y1: 1, y2: 0 },
+            stops: [
+              [0, 'rgba(255,255,255,0.4)'],
+              [1, 'rgba(255,255,255,0)'],
+            ],
+          },
+        },
+        {
+          name: 'Public',
+          y: 55,
+          borderColor: '#779176',
+          color: {
+            linearGradient: { x1: 0, x2: 2, y1: 1, y2: 0 },
+            stops: [
+              [0, 'rgba(109, 184, 102, 0.4)'],
+              [1, 'rgba(255,255,255,0)'],
+            ],
+          },
+        },
+        {
+          name: 'Public',
+          sliced: true,
+          y: 10,
+          borderColor: '#A49D69',
+          color: {
+            linearGradient: { x1: 0, x2: 2, y1: 1, y2: 0 },
+            stops: [
+              [0, 'rgba(255, 232, 103, 0.4)'],
+              [1, 'rgba(255,255,255,0)'],
+            ],
+          },
+        },
+        {
+          name: 'Public',
+          y: 5,
+          borderColor: '#A66455',
+          color: {
+            linearGradient: { x1: 0, x2: 2, y1: 1, y2: 0 },
+            stops: [
+              [0, 'rgba(253, 127, 102, 0.4)'],
+              [1, 'rgba(255,255,255,0)'],
+            ],
+          },
+        },
+      ],
+    },
+  ],
+};
 
-//   const { x, y, outerRadius } = context.element;
+const indicatorTabToken = document.querySelector('.tokenomics__indicator');
+let activeTabToken = document.querySelector('.tokenomics__tab._active');
+let selectTab = activeTabToken.dataset.tabName;
 
-//   // Проверка, чтобы значения x, y, и outerRadius были числовыми и не равнялись NaN или Infinity
-//   if (isNaN(x) || isNaN(y) || isNaN(outerRadius)) {
-//     console.error('Invalid values for radial gradient:', { x, y, outerRadius });
-//     return;
-//   }
-
-//   const ctx = context.chart.ctx;
-//   const gradient = ctx.createRadialGradient(x, y, 0, x, y, outerRadius);
-
-//   gradient.addColorStop(0, 'rgba(255,255,255,0)');
-//   gradient.addColorStop(1, color);
-
-//   return gradient;
-// }
-
-// const colors = ['rgba(255, 255, 255, 0.4)', 'rgba(109, 184, 102, 0.4)', 'rgba(255, 232, 103, 0.4)', 'rgba(253, 127, 102, 0.3)'];
-// const borderColors = ['rgba(255, 255, 255, 1)', '#809F7E', '#A69C65', '#9C6357'];
-
-// const data = {
-//   labels: ['Public', 'Public', 'Public', 'Public', 'Public'],
-//   datasets: [
-//     {
-//       data: [5, 75, 15, 25],
-//       borderWidth: 3, // Ширина обводки
-//       borderColor: function (context) {
-//         const borderColor = borderColors[context.dataIndex];
-//         if (!borderColor) return;
-//         return borderColor;
-//       },
-//     },
-//   ],
-// };
-
-// const config = {
-//   type: 'pie',
-//   data: data,
-//   options: {
-//     // zoomOutPercentage: 100,
-//     // defaultFontSize: 100,
-//     plugins: {
-//       legend: false,
-//       tooltip: true,
-//       outlabels: {
-//         borderRadius: 0, // Border radius of Label
-//         borderWidth: 0, // Thickness of border
-//         color: '#FD7F66', // Font color,
-//         backgroundColor: '#121214',
-//         textSize: 100,
-//         display: true,
-//         lineWidth: 1, // Thickness of line between chart arc and Label
-//         lineColor: 'white',
-//         stretch: 70, // The length between chart arc and Label
-//         text: '%p \n %l',
-//         textAlign: 'center',
-//         font: {
-//           family: 'Space Grotesk',
-//           weight: 900,
-//           minSize: 30,
-//         },
-//       },
-//     },
-//     elements: {
-//       arc: {
-//         backgroundColor: function (context) {
-//           const color = colors[context.dataIndex];
-//           if (!color) return;
-//           return createRadialGradientPie(context, color);
-//         },
-//         // borderWidth: 3, // Ширина обводки
-//         // hoverOffset: 100, // Смещение сегмента при наведении, без изменения размера
-//       },
-//     },
-//     animation: {
-//       animateRotate: false, // Отключаем вращение
-//       animateScale: false, // Отключаем изменение масштаба
-//     },
-//     responsive: true, // Убедитесь, что график масштабируется с размером экрана
-//     layout: {
-//       padding: {
-//         left: 140, // Отступ слева
-//         right: 140, // Отступ справа
-//         top: 140, // Отступ сверху
-//         bottom: 140, // Отступ снизу
-//       },
-//     },
-//   },
-// };
-
-// const chartToken = new Chart(document.getElementById('chartCanvas'), config);
-
+let chart;
 document.addEventListener('DOMContentLoaded', function () {
-  Highcharts.chart('tokenomics__charts', {
+  chart = Highcharts.chart('tokenomics__charts', {
     chart: {
       width: 1320,
       height: 500,
@@ -169,62 +365,50 @@ document.addEventListener('DOMContentLoaded', function () {
         ],
       },
     },
-    series: [
-      {
-        name: 'Percentage',
-        colorByPoint: true,
-        data: [
-          {
-            name: 'Public',
-            y: 5,
-            borderColor: '#ECECED',
-            color: {
-              linearGradient: { x1: 0, x2: 2, y1: 1, y2: 0 },
-              stops: [
-                [0, 'rgba(255,255,255,0.4)'],
-                [1, 'rgba(255,255,255,0)'],
-              ],
-            },
-          },
-          {
-            name: 'Public',
-            y: 75,
-            borderColor: '#779176',
-            color: {
-              linearGradient: { x1: 0, x2: 2, y1: 1, y2: 0 },
-              stops: [
-                [0, 'rgba(109, 184, 102, 0.4)'],
-                [1, 'rgba(255,255,255,0)'],
-              ],
-            },
-          },
-          {
-            name: 'Public',
-            sliced: true,
-            y: 15,
-            borderColor: '#A49D69',
-            color: {
-              linearGradient: { x1: 0, x2: 2, y1: 1, y2: 0 },
-              stops: [
-                [0, 'rgba(255, 232, 103, 0.4)'],
-                [1, 'rgba(255,255,255,0)'],
-              ],
-            },
-          },
-          {
-            name: 'Public',
-            y: 25,
-            borderColor: '#A66455',
-            color: {
-              linearGradient: { x1: 0, x2: 2, y1: 1, y2: 0 },
-              stops: [
-                [0, 'rgba(253, 127, 102, 0.4)'],
-                [1, 'rgba(255,255,255,0)'],
-              ],
-            },
-          },
-        ],
-      },
-    ],
+    series: JSON.parse(JSON.stringify(datas[selectTab])),
   });
 });
+
+setTimeout(() => {
+  indicatorTabToken.style.width = activeTabToken.clientWidth + 18 + 'px';
+  indicatorTabToken.style.left = activeTabToken.offsetLeft - 9 + 'px';
+}, 100);
+
+let tabsToken = () => {
+  let nav = document.querySelectorAll('.tokenomics__tab'),
+    result = document.querySelectorAll('.tokenomics__block'),
+    tabName;
+
+  nav.forEach(item => {
+    item.addEventListener('click', selectnav);
+  });
+
+  function selectnav() {
+    nav.forEach(item => {
+      item.classList.remove('_active');
+    });
+    this.classList.add('_active');
+
+    indicatorTabToken.style.width = this.clientWidth + 18 + 'px';
+    indicatorTabToken.style.left = this.offsetLeft - 9 + 'px';
+
+    tabName = this.getAttribute('data-tab-name');
+    selectTab = tabName;
+    console.log(selectTab);
+
+    console.log(datas);
+
+    chart.update({
+      series: JSON.parse(JSON.stringify(datas[selectTab])),
+    });
+    selectresult(tabName);
+  }
+
+  function selectresult(tabName) {
+    result.forEach(item => {
+      item.classList.contains(tabName) ? item.classList.add('_active') : item.classList.remove('_active');
+    });
+  }
+};
+
+tabsToken();
