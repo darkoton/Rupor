@@ -3,8 +3,6 @@ document.addEventListener('resize', createSliderStart);
 document.addEventListener('orientationchange ', createSliderStart);
 
 function createSliderStart() {
-  console.log(1);
-
   const width = window.innerWidth;
   if (width < 768) {
     new Swiper('.start__slider', {
