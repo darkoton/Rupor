@@ -5,17 +5,17 @@ import isDevice from './modules/device.js'; //DEFINE DEVICE
 
 // import './modules/preloader.js'; // PRELOADER
 
-// import "./modules/spoiler.js"  // SPOILERS
+import './modules/spoiler.js'; // SPOILERS
 
 // import "./modules/dynamic_adap.js"  // DYNAMIC ADAPTIVE
 
 // import "./modules/scroll_header.js"  // SCROLL HEADER
 
-import "./modules/swiper.js"  // SLIDER SWIPER
+import './modules/swiper.js'; // SLIDER SWIPER
 
 // import "./modules/animate_scroll.js"  // ANIMATE WITH SCROLL
 
-import "./modules/tabs.js"  // TABS
+import './modules/tabs.js'; // TABS
 
 // import "./modules/parallax.js"  // PARALLAX EFFECT
 
@@ -32,10 +32,10 @@ const burgerMenu = document.querySelector('.header__nav');
 
 burgerOpen.addEventListener('click', () => {
   burgerMenu.classList.add('active');
-  document.body.classList.add('_lock-scroll')
+  document.body.classList.add('_lock-scroll');
 });
 
 burgerClose.addEventListener('click', () => {
   burgerMenu.classList.remove('active');
-  document.body.classList.remove('_lock-scroll')
+  document.body.classList.remove('_lock-scroll');
 });
