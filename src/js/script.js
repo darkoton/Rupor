@@ -17,6 +17,8 @@ import './modules/swiper.js'; // SLIDER SWIPER
 
 import './modules/tabs.js'; // TABS
 
+import './modules/chart.js'; // CHART
+
 // import "./modules/parallax.js"  // PARALLAX EFFECT
 
 //< " СКРИПТЫ " >=============================================================================================================>//
