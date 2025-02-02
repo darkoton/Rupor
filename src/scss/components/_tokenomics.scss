@@ -16,27 +16,11 @@
   }
 
   &__chart {
-    width: 100%;
-    max-width: 986px;
-    align-self: center;
-    padding: 0 15px;
+    height: 500px;
 
-    @include fluid(margin-bottom, 52px, 0px, 320px, 1320px);
-
-    @media (max-width: 1386px) {
-      padding: 0;
-    }
-
-    @media (max-width: 768px) {
+    & .canvasjs-chart-credit {
       display: none;
-    }
-
-    picture {
-      width: 100%;
-    }
-
-    img {
-      width: 100%;
+      background-color: rgb(253, 127, 102);
     }
   }
 
