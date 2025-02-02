@@ -1810,7 +1810,7 @@ body._lock-scroll {
   background-color: #fff;
 }
 .partners__banner {
-  padding-top: 30;
+  padding-top: 30px;
 }
 @media (max-width: 1320px) {
   .partners__banner {
@@ -1823,7 +1823,7 @@ body._lock-scroll {
   }
 }
 .partners__banner {
-  padding-bottom: 30;
+  padding-bottom: 30px;
 }
 @media (max-width: 1320px) {
   .partners__banner {
