@@ -17,11 +17,27 @@
 
   &__chart {
     width: 100%;
-    max-width: 986px;
+    max-width: 1320px;
     align-self: center;
     padding: 0 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    @include fluid(margin-bottom, 52px, 0px, 320px, 1320px);
+    @include fluid(max-height, 500px, 350px, 768px, 1320px);
+    @include fluid(margin-bottom, 10px, 0px, 768px, 1320px);
+
+    & .highcharts-container {
+      display: flex;
+      max-width: 100%;
+
+      @include fluid(height, 52px, 0px, 320px, 1320px);
+
+    }
+
+    & .highcharts-credits {
+      display: none;
+    }
 
     @media (max-width: 1386px) {
       padding: 0;
