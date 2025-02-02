@@ -394,9 +394,6 @@ let tabsToken = () => {
 
     tabName = this.getAttribute('data-tab-name');
     selectTab = tabName;
-    console.log(selectTab);
-
-    console.log(datas);
 
     chart.update({
       series: JSON.parse(JSON.stringify(datas[selectTab])),
