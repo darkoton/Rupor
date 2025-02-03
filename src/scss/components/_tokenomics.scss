@@ -32,7 +32,6 @@
       max-width: 100%;
 
       @include fluid(height, 52px, 0px, 320px, 1320px);
-
     }
 
     & .highcharts-credits {
@@ -61,9 +60,11 @@
     max-width: 1386px;
     margin: 0 auto;
     backdrop-filter: blur(42px);
-    background: radial-gradient(407.02% 136.53% at 0.9% 2.98%,
-        rgba(255, 255, 255, 0.1) 0%,
-        rgba(255, 255, 255, 0) 100%);
+    background: radial-gradient(
+      407.02% 136.53% at 0.9% 2.98%,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
     border-radius: 25px;
     border: 1px solid #4c4c4e;
     overflow: hidden;
@@ -104,7 +105,8 @@
     }
   }
 
-  &__tab {
+  &__tab,
+  &__tab-title {
     @include text-gradient(225deg, #fd7f66, #f4d35e);
     font-weight: 400;
     text-align: center;
@@ -303,9 +305,11 @@
 
     &-field {
       backdrop-filter: blur(42px);
-      background: radial-gradient(407.02% 136.53% at 0.9% 2.98%,
-          rgba(255, 255, 255, 0.1) 0%,
-          rgba(255, 255, 255, 0) 100%);
+      background: radial-gradient(
+        407.02% 136.53% at 0.9% 2.98%,
+        rgba(255, 255, 255, 0.1) 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
       display: flex;
       align-items: center;
       justify-content: space-between;

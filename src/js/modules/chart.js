@@ -1,295 +1,67 @@
-const datas = {
-  rupor: [
-    {
-      name: 'Percentage',
-      colorByPoint: true,
-      data: [
-        {
-          name: 'Public',
-          y: 15,
-          borderColor: '#ECECED',
-          color: {
-            linearGradient: { x1: 0, x2: 2, y1: 1, y2: 0 },
-            stops: [
-              [0, 'rgba(255,255,255,0.4)'],
-              [1, 'rgba(255,255,255,0)'],
-            ],
-          },
+const datas = [
+  {
+    name: 'Percentage',
+    colorByPoint: true,
+    data: [
+      {
+        id: 0,
+        name: 'Public',
+        y: 5,
+        borderColor: '#ECECED',
+        color: {
+          linearGradient: { x1: 0, x2: 2, y1: 1, y2: 0 },
+          stops: [
+            [0, 'rgba(255,255,255,0.4)'],
+            [1, 'rgba(255,255,255,0)'],
+          ],
         },
-        {
-          name: 'Public',
-          y: 20,
-          borderColor: '#779176',
-          color: {
-            linearGradient: { x1: 0, x2: 2, y1: 1, y2: 0 },
-            stops: [
-              [0, 'rgba(109, 184, 102, 0.4)'],
-              [1, 'rgba(255,255,255,0)'],
-            ],
-          },
+      },
+      {
+        id: 1,
+        name: 'Public',
+        y: 75,
+        borderColor: '#779176',
+        color: {
+          linearGradient: { x1: 0, x2: 2, y1: 1, y2: 0 },
+          stops: [
+            [0, 'rgba(109, 184, 102, 0.4)'],
+            [1, 'rgba(255,255,255,0)'],
+          ],
         },
-        {
-          name: 'Public',
-          sliced: true,
-          y: 15,
-          borderColor: '#A49D69',
-          color: {
-            linearGradient: { x1: 0, x2: 2, y1: 1, y2: 0 },
-            stops: [
-              [0, 'rgba(255, 232, 103, 0.4)'],
-              [1, 'rgba(255,255,255,0)'],
-            ],
-          },
+      },
+      {
+        id: 2,
+        name: 'Public',
+        sliced: true,
+        y: 15,
+        borderColor: '#A49D69',
+        color: {
+          linearGradient: { x1: 0, x2: 2, y1: 1, y2: 0 },
+          stops: [
+            [0, 'rgba(255, 232, 103, 0.4)'],
+            [1, 'rgba(255,255,255,0)'],
+          ],
         },
-        {
-          name: 'Public',
-          y: 40,
-          borderColor: '#A66455',
-          color: {
-            linearGradient: { x1: 0, x2: 2, y1: 1, y2: 0 },
-            stops: [
-              [0, 'rgba(253, 127, 102, 0.4)'],
-              [1, 'rgba(255,255,255,0)'],
-            ],
-          },
+      },
+      {
+        id: 3,
+        name: 'Public',
+        y: 25,
+        borderColor: '#A66455',
+        color: {
+          linearGradient: { x1: 0, x2: 2, y1: 1, y2: 0 },
+          stops: [
+            [0, 'rgba(253, 127, 102, 0.4)'],
+            [1, 'rgba(255,255,255,0)'],
+          ],
         },
-      ],
-    },
-  ],
-  liquidity: [
-    {
-      name: 'Percentage',
-      colorByPoint: true,
-      data: [
-        {
-          name: 'Public',
-          y: 5,
-          borderColor: '#ECECED',
-          color: {
-            linearGradient: { x1: 0, x2: 2, y1: 1, y2: 0 },
-            stops: [
-              [0, 'rgba(255,255,255,0.4)'],
-              [1, 'rgba(255,255,255,0)'],
-            ],
-          },
-        },
-        {
-          name: 'Public',
-          y: 75,
-          borderColor: '#779176',
-          color: {
-            linearGradient: { x1: 0, x2: 2, y1: 1, y2: 0 },
-            stops: [
-              [0, 'rgba(109, 184, 102, 0.4)'],
-              [1, 'rgba(255,255,255,0)'],
-            ],
-          },
-        },
-        {
-          name: 'Public',
-          sliced: true,
-          y: 15,
-          borderColor: '#A49D69',
-          color: {
-            linearGradient: { x1: 0, x2: 2, y1: 1, y2: 0 },
-            stops: [
-              [0, 'rgba(255, 232, 103, 0.4)'],
-              [1, 'rgba(255,255,255,0)'],
-            ],
-          },
-        },
-        {
-          name: 'Public',
-          y: 25,
-          borderColor: '#A66455',
-          color: {
-            linearGradient: { x1: 0, x2: 2, y1: 1, y2: 0 },
-            stops: [
-              [0, 'rgba(253, 127, 102, 0.4)'],
-              [1, 'rgba(255,255,255,0)'],
-            ],
-          },
-        },
-      ],
-    },
-  ],
-  reserves: [
-    {
-      name: 'Percentage',
-      colorByPoint: true,
-      data: [
-        {
-          name: 'Public',
-          y: 30,
-          borderColor: '#ECECED',
-          color: {
-            linearGradient: { x1: 0, x2: 2, y1: 1, y2: 0 },
-            stops: [
-              [0, 'rgba(255,255,255,0.4)'],
-              [1, 'rgba(255,255,255,0)'],
-            ],
-          },
-        },
-        {
-          name: 'Public',
-          y: 40,
-          borderColor: '#779176',
-          color: {
-            linearGradient: { x1: 0, x2: 2, y1: 1, y2: 0 },
-            stops: [
-              [0, 'rgba(109, 184, 102, 0.4)'],
-              [1, 'rgba(255,255,255,0)'],
-            ],
-          },
-        },
-        {
-          name: 'Public',
-          sliced: true,
-          y: 15,
-          borderColor: '#A49D69',
-          color: {
-            linearGradient: { x1: 0, x2: 2, y1: 1, y2: 0 },
-            stops: [
-              [0, 'rgba(255, 232, 103, 0.4)'],
-              [1, 'rgba(255,255,255,0)'],
-            ],
-          },
-        },
-        {
-          name: 'Public',
-          y: 15,
-          borderColor: '#A66455',
-          color: {
-            linearGradient: { x1: 0, x2: 2, y1: 1, y2: 0 },
-            stops: [
-              [0, 'rgba(253, 127, 102, 0.4)'],
-              [1, 'rgba(255,255,255,0)'],
-            ],
-          },
-        },
-      ],
-    },
-  ],
-  airdrops: [
-    {
-      name: 'Percentage',
-      colorByPoint: true,
-      data: [
-        {
-          name: 'Public',
-          y: 10,
-          borderColor: '#ECECED',
-          color: {
-            linearGradient: { x1: 0, x2: 2, y1: 1, y2: 0 },
-            stops: [
-              [0, 'rgba(255,255,255,0.4)'],
-              [1, 'rgba(255,255,255,0)'],
-            ],
-          },
-        },
-        {
-          name: 'Public',
-          sliced: true,
-          y: 50,
-          borderColor: '#779176',
-          color: {
-            linearGradient: { x1: 0, x2: 2, y1: 1, y2: 0 },
-            stops: [
-              [0, 'rgba(109, 184, 102, 0.4)'],
-              [1, 'rgba(255,255,255,0)'],
-            ],
-          },
-        },
-        {
-          name: 'Public',
-          sliced: true,
-          y: 15,
-          borderColor: '#A49D69',
-          color: {
-            linearGradient: { x1: 0, x2: 2, y1: 1, y2: 0 },
-            stops: [
-              [0, 'rgba(255, 232, 103, 0.4)'],
-              [1, 'rgba(255,255,255,0)'],
-            ],
-          },
-        },
-        {
-          name: 'Public',
-          y: 25,
-          borderColor: '#A66455',
-          color: {
-            linearGradient: { x1: 0, x2: 2, y1: 1, y2: 0 },
-            stops: [
-              [0, 'rgba(253, 127, 102, 0.4)'],
-              [1, 'rgba(255,255,255,0)'],
-            ],
-          },
-        },
-      ],
-    },
-  ],
-  development: [
-    {
-      name: 'Percentage',
-      colorByPoint: true,
-      data: [
-        {
-          name: 'Public',
-          y: 30,
-          borderColor: '#ECECED',
-          color: {
-            linearGradient: { x1: 0, x2: 2, y1: 1, y2: 0 },
-            stops: [
-              [0, 'rgba(255,255,255,0.4)'],
-              [1, 'rgba(255,255,255,0)'],
-            ],
-          },
-        },
-        {
-          name: 'Public',
-          y: 55,
-          borderColor: '#779176',
-          color: {
-            linearGradient: { x1: 0, x2: 2, y1: 1, y2: 0 },
-            stops: [
-              [0, 'rgba(109, 184, 102, 0.4)'],
-              [1, 'rgba(255,255,255,0)'],
-            ],
-          },
-        },
-        {
-          name: 'Public',
-          sliced: true,
-          y: 10,
-          borderColor: '#A49D69',
-          color: {
-            linearGradient: { x1: 0, x2: 2, y1: 1, y2: 0 },
-            stops: [
-              [0, 'rgba(255, 232, 103, 0.4)'],
-              [1, 'rgba(255,255,255,0)'],
-            ],
-          },
-        },
-        {
-          name: 'Public',
-          y: 5,
-          borderColor: '#A66455',
-          color: {
-            linearGradient: { x1: 0, x2: 2, y1: 1, y2: 0 },
-            stops: [
-              [0, 'rgba(253, 127, 102, 0.4)'],
-              [1, 'rgba(255,255,255,0)'],
-            ],
-          },
-        },
-      ],
-    },
-  ],
-};
+      },
+    ],
+  },
+];
 
 const indicatorTabToken = document.querySelector('.tokenomics__indicator');
 let activeTabToken = document.querySelector('.tokenomics__tab._active');
-let selectTab = activeTabToken.dataset.tabName;
 
 let chart;
 document.addEventListener('DOMContentLoaded', function () {
@@ -306,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
     },
     plotOptions: {
       series: {
-        allowPointSelect: true,
+        allowPointSelect: false,
         cursor: 'pointer',
         dataLabels: [
           {
@@ -365,7 +137,7 @@ document.addEventListener('DOMContentLoaded', function () {
         ],
       },
     },
-    series: JSON.parse(JSON.stringify(datas[selectTab])),
+    series: datas,
   });
 });
 
@@ -393,11 +165,21 @@ let tabsToken = () => {
     indicatorTabToken.style.left = this.offsetLeft - 9 + 'px';
 
     tabName = this.getAttribute('data-tab-name');
-    selectTab = tabName;
+    const chartEl = this.getAttribute('data-chart-el');
+
+    datas[0].data = datas[0].data.map(el => {
+      el.sliced = false;
+      return el;
+    });
+
+    datas[0].data[chartEl].sliced = true;
 
     chart.update({
-      series: JSON.parse(JSON.stringify(datas[selectTab])),
+      series: datas,
     });
+
+    console.log(chart);
+
     selectresult(tabName);
   }
 
