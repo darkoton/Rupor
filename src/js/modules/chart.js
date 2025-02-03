@@ -178,8 +178,6 @@ let tabsToken = () => {
       series: datas,
     });
 
-    console.log(chart);
-
     selectresult(tabName);
   }
 
