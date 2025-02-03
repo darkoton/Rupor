@@ -2097,7 +2097,7 @@ body._lock-scroll {
     width: fit-content;
   }
 }
-.tokenomics__tab {
+.tokenomics__tab, .tokenomics__tab-title {
   background: -webkit-linear-gradient(225deg, #fd7f66, #f4d35e);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -2106,29 +2106,29 @@ body._lock-scroll {
   cursor: pointer;
   padding: 7px 0;
 }
-.tokenomics__tab {
+.tokenomics__tab, .tokenomics__tab-title {
   font-size: 20px;
 }
 @media (max-width: 1320px) {
-  .tokenomics__tab {
+  .tokenomics__tab, .tokenomics__tab-title {
     font-size: calc(11px - -9 * (100vw - 320px) / 1000);
   }
 }
 @media (max-width: 320px) {
-  .tokenomics__tab {
+  .tokenomics__tab, .tokenomics__tab-title {
     font-size: 11px;
   }
 }
-.tokenomics__tab {
+.tokenomics__tab, .tokenomics__tab-title {
   line-height: 26px;
 }
 @media (max-width: 1320px) {
-  .tokenomics__tab {
+  .tokenomics__tab, .tokenomics__tab-title {
     line-height: calc(14px - -12 * (100vw - 320px) / 1000);
   }
 }
 @media (max-width: 320px) {
-  .tokenomics__tab {
+  .tokenomics__tab, .tokenomics__tab-title {
     line-height: 14px;
   }
 }
