@@ -73,9 +73,10 @@ document.addEventListener('DOMContentLoaded', function () {
       backgroundColor: 'transparent',
     },
     title: null,
-    tooltip: {
-      valueSuffix: '%',
-    },
+    // tooltip: {
+    //   valueSuffix: '%',
+    // },
+    tooltip: false,
     plotOptions: {
       series: {
         allowPointSelect: false,
